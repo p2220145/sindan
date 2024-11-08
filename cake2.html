@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAMINケーキ診断</title>
+    <link rel="stylesheet" href="cake2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>
+      JAMIN
+    </h1>
+  </header>
+    <div id="start-screen">
+        <h1 class="title">JAMINケーキ診断</h1>
+        
+        <button onclick="startQuiz()" class="start-button">診断スタート</button>
+        
+    </div>
+
+    <div id="quiz-screen" class="hidden">
+        <h1 class="title"> </h1>
+        <p id="question" class="question-text"></p>
+        <div class="buttons">
+          <h3>  <button onclick="answer('yes')" class="answer-button">はい</button>
+            <button onclick="answer('no')" class="answer-button">いいえ</button>
+            <button onclick="answer('any')" class="answer-button">どちらでも</button>
+          </h3> 
+   </div>
+   <button id="show-result-button" class="hidden retry-button" onclick="showResult()">結果を表示</button>
+    </div>
+
+    <div id="result-screen" class="hidden">
+        <h1 class="title2">あなたにおすすめのケーキは</h1>
+        <div id="cake-list" class="cake-list"></div>
+        <button onclick="restartQuiz()" class="retry-button">もう一度</button>
+        <p class="note">こちらの結果は皆様のケーキ選びの参考としてご利用ください。ご来店お待ちしております。</p>
+    </div>
+
+    <script src="cake2.js"></script>
+</body>
+</html>

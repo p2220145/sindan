@@ -1,0 +1,144 @@
+body {
+  font-family: 'Noto Serif JP', serif;
+  background-color: #2F4F4F;
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  transition: opacity 0.5s ease-in-out;
+}
+header {
+  width: 100%; /* ページの横幅いっぱい */
+  height: 50px; /* 縦幅を小さめに設定 */
+  text-align: left;
+  color: #c8c8c8;
+  background-color: #ffffff;
+  display: flex; /* フレックスボックスを使用 */
+  align-items: center; /* 垂直方向の中央揃え */
+  padding: 0 20px; /* 左右の余白を追加 */
+  padding-left: 40px; /* 左側の余白を増やして文字を右に移動 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 下に影を追加（任意） */
+  position: fixed; /* ページのスクロールに影響しないように固定 */
+  top: 0; /* 上部に配置 */
+  z-index: 1000; /* 他の要素の上に表示 */
+}
+
+
+
+
+.title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.title2 {
+  font-size: 1.5em;
+  text-align: center;
+  align-items: center; /* 垂直方向の中央揃え */
+  padding:center; /* 左右の余白を追加 */
+  position: center;
+}
+
+.question-text {
+  font-size: 1.5em;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.start-button, .answer-button {
+  background-color: #2F4F4F;
+  border-radius: 8px;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background-color 0.3s;
+  
+}
+.retry-button {
+  background-color: #2F4F4F;
+  color: #FFFFFF;
+  margin: 20px;
+  padding: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s;
+}
+.start-button:hover, .answer-button:hover {
+  background-color: #172009;
+  
+}
+.retry-button:hover {
+  background-color: #172009;
+}
+
+.title2{
+  margin-top: 200px;
+  padding: 20px;
+  font-size: 1.5em;
+  text-align: center;
+  align-items: 80; /* 垂直方向の中央揃え */
+  
+  
+}
+
+
+.cake-list {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.note {
+  font-size: 0.8em;
+  color: #D3D3D3;
+  padding: 30px;
+  margin-top: 10px;
+  position: relative;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* フェードインのアニメーションを定義 */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(10px); /* 下から少し上がってくるように */
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+.hidden {
+  display: none;
+}
+/* フェードインを適用するクラス */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+.hidden2{
+  display: none;
+}
+
+/* 結果のケーキリストをスクロールできるように設定 */
+#cake-list {
+  
+  max-height: 400px; /* リストの表示エリアの高さを設定（必要に応じて調整） */
+  overflow-y: auto; /* 縦方向のスクロールを有効にする */
+  padding: 10px; /* 内側の余白を設定 */
+  /*border: 1px solid #e0e0e0; /* 境界線を追加（必要に応じて） */
+  background-color:2F4F4F; /* 背景色 */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加して浮かび上がらせる */
+  border-radius: 8px; /* 角を丸くする */
+}
+
+
